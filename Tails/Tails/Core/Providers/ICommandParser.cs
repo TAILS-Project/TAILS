@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tails.Core.Providers
 {
-    class ICommandParser
+    public interface ICommandParser
     {
     }
 }

@@ -8,11 +8,6 @@ namespace Tails.Models.Abstractions
 {
     public interface IStudent
     {
-        int Id { get; set; }
-
-        int FirstName { get; set; }
-
-        int LastName { get; set; }
-
+        
     }
 }

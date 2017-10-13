@@ -42,16 +42,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Core\Engine.cs" />
+    <Compile Include="Core\Factories\CommandFactory.cs" />
+    <Compile Include="Core\Factories\ICommandFactory.cs" />
+    <Compile Include="Core\Factories\ITailsFactory.cs" />
+    <Compile Include="Core\Factories\TailsFactory.cs" />
+    <Compile Include="Core\IEngine.cs" />
+    <Compile Include="Core\Providers\CommandParser.cs" />
+    <Compile Include="Core\Providers\ConsoleReader.cs" />
+    <Compile Include="Core\Providers\ConsoleWriter.cs" />
+    <Compile Include="Core\Providers\ICommandParser.cs" />
+    <Compile Include="Core\Providers\IConsoleReader.cs" />
+    <Compile Include="Core\Providers\IConsoleWriter.cs" />
+    <Compile Include="Core\Providers\IPdfDrawer.cs" />
+    <Compile Include="Core\Providers\PdfDrawer.cs" />
+    <Compile Include="Models\Abstractions\ICourse.cs" />
+    <Compile Include="Models\Abstractions\IExam.cs" />
+    <Compile Include="Models\Abstractions\IHall.cs" />
+    <Compile Include="Models\Abstractions\ISeat.cs" />
+    <Compile Include="Models\Abstractions\IStudent.cs" />
+    <Compile Include="Models\Model\Coursecs.cs" />
+    <Compile Include="Models\Model\Exam.cs" />
+    <Compile Include="Models\Model\Hall.cs" />
+    <Compile Include="Models\Model\Seat.cs" />
+    <Compile Include="Models\Model\Student.cs" />
+    <Compile Include="Ninject\TailsModule.cs" />
+    <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Exam.json" />
-    <None Include="Students.json" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Halls.json" />
+    <Folder Include="Commands\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

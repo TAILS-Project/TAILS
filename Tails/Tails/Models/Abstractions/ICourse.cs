@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tails.Models.Abstractions
 {
-    class Class1
+    public interface ICourse
     {
     }
 }

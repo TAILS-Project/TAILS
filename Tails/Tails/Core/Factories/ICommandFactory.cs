@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tails.Core.Factories
 {
-    class ICommandFactory
+    public interface ICommandFactory
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tails.Models.Abstractions
 {
-    class IExam
+    public interface IExam
     {
     }
 }
