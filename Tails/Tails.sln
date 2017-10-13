@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tails", "Tails\Tails.csproj", "{BC732A75-E75E-4797-8ECA-233B66162909}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{50806C58-4E70-4849-978F-B7FDD3E0B082}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Factory", "Factory", "{CC6215D4-4230-4EE3-82E0-861F167DDE43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC732A75-E75E-4797-8ECA-233B66162909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC732A75-E75E-4797-8ECA-233B66162909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC732A75-E75E-4797-8ECA-233B66162909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC732A75-E75E-4797-8ECA-233B66162909}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CC6215D4-4230-4EE3-82E0-861F167DDE43} = {50806C58-4E70-4849-978F-B7FDD3E0B082}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51B96069-76AB-4A78-A6F9-642D7BD1A096}
+	EndGlobalSection
+EndGlobal
