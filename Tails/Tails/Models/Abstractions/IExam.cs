@@ -8,5 +8,8 @@ namespace Tails.Models.Abstractions
 {
     public interface IExam
     {
+        int CourseId { get; }
+
+        DateTime DateTime { get; }
     }
 }

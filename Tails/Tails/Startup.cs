@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Tails
 {
-    class Startup
+    public class Startup
     {
-        static void Main(string[] args)
+        static void Main()
         {
+
         }
     }
 }

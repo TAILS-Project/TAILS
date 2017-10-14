@@ -8,5 +8,6 @@ namespace Tails.Models.Abstractions
 {
     public interface ISeat
     {
+
     }
 }

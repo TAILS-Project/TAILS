@@ -8,5 +8,8 @@ namespace Tails.Models.Abstractions
 {
     public interface ICourse
     {
-    }
+        int Id { get; }
+
+        string CourseName { get; }
+      }
 }
