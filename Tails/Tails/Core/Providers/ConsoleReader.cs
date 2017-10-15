@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Tails.Core.Providers
 {
-    class ConsoleReader
+    public class ConsoleReader : IReader
     {
+        public string ReadLine()
+        {
+            return Console.ReadLine();
+        }
     }
 }

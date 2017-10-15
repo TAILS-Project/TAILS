@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tails.Core
+namespace Tails.Core.Providers
 {
-    public interface IEngine
+    public interface IReader
     {
-        void Start();
+        string ReadLine();
     }
 }

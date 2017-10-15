@@ -9,19 +9,19 @@ using Tails.Models.Abstractions;
 
 namespace Tails.Models.Model
 {
-    public class Exam : IExam
+    public class Course : ICourse
     {
-                
-        public Exam(int courseId, DateTime dateTime)
+        public Course(int id, string courseName)
         {
-            this.CourseId = courseId;
-            this.DateTime = dateTime;
+            this.Id = id;
+            this.CourseName = courseName;
         }
 
         [Range(1, 1000)]
-        public int CourseId { get; set; }
+        public int Id { get; set; }
+        
+        public string CourseName { get; set; }
        
-        public DateTime DateTime { get; set; }
 
     }
 }

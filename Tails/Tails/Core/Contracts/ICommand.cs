@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tails.Core.Providers
+namespace Tails.Core.Contracts
 {
-    public interface IConsoleReader
+    public interface ICommand
     {
+        string Execute(IList<string> parameters);
     }
 }
