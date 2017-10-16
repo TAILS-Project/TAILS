@@ -7,8 +7,7 @@ using Tails.Models.Abstractions;
 
 namespace Tails.Models.Model
 {
-    public class Seat : ISeat
+    public class Seat
     {
-       
     }
 }

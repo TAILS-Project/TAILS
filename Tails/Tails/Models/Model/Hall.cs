@@ -9,15 +9,11 @@ using Tails.Models.Abstractions;
 
 namespace Tails.Models.Model
 {
-    public class Hall : IHall
+    public class Hall 
     {
-       
-        public Hall(int id, int capacity, string name, string picture)
+
+        public Hall()
         {
-            this.Id = id;
-            this.Capacity = capacity;
-            this.Name = name;
-            this.Picture = picture;
         }
 
         [Range(1, 1000)]
@@ -27,7 +23,7 @@ namespace Tails.Models.Model
         public int Capacity { get; set; }
 
         public string Name { get; set; }
-                     
+
         public string Picture { get; set; }
     }
 }

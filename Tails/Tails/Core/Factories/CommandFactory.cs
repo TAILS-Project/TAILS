@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Bytes2you.Validation;
+using Ninject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Tails.Core.Factories
 {

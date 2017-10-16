@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Tails.Core
 {
-    class Engine
+    public class Engine : IEngine
     {
+        public void Start()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

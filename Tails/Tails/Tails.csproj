@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\CreateStudent.cs" />
     <Compile Include="Core\Contracts\ICommand.cs" />
     <Compile Include="Core\Engine.cs" />
     <Compile Include="Core\Factories\CommandFactory.cs" />
@@ -65,18 +66,15 @@
     <Compile Include="Core\Providers\CommandParser.cs" />
     <Compile Include="Core\Providers\ConsoleReader.cs" />
     <Compile Include="Core\Providers\ConsoleWriter.cs" />
+    <Compile Include="Core\Providers\Database.cs" />
     <Compile Include="Core\Providers\ICommandParser.cs" />
-    <Compile Include="Core\Providers\IConsoleReader.cs" />
-    <Compile Include="Core\Providers\IConsoleWriter.cs" />
+    <Compile Include="Core\Providers\IReader.cs" />
+    <Compile Include="Core\Providers\IWriter.cs" />
+    <Compile Include="Core\Providers\IDatabase.cs" />
     <Compile Include="Core\Providers\IPdfDrawer.cs" />
     <Compile Include="Core\Providers\PdfDrawer.cs" />
     <Compile Include="Data\ITailsContext.cs" />
     <Compile Include="Data\TailsContext.cs" />
-    <Compile Include="Models\Abstractions\ICourse.cs" />
-    <Compile Include="Models\Abstractions\IExam.cs" />
-    <Compile Include="Models\Abstractions\IHall.cs" />
-    <Compile Include="Models\Abstractions\ISeat.cs" />
-    <Compile Include="Models\Abstractions\IStudent.cs" />
     <Compile Include="Models\Model\Course.cs" />
     <Compile Include="Models\Model\Exam.cs" />
     <Compile Include="Models\Model\Hall.cs" />
@@ -90,8 +88,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Commands\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

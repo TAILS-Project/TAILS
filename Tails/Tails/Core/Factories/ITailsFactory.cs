@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tails.Models.Abstractions;
+using Tails.Models.Model;
 
 namespace Tails.Core.Factories
 {
     public interface ITailsFactory
     {
-        ICourse CreateCourse(int id, string courseName);
+        Course CreateCourse();
 
-        IExam CreateExam(int courseId, DateTime dateTime);
+        Exam CreateExam();
 
-        IHall CreateHall(int id, int capacity, string name, string pictures);
+        Hall CreateHall();
 
-        ISeat CreateSeat();
+        Seat CreateSeat();
 
-        IStudent CreateStudent(int id, string firstName, string lastName, string username);
+        Student CreateStudent();
     }
 }

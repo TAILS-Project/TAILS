@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Tails.Core.Providers
 {
-    public interface IConsoleWriter
+    public interface IWriter
     {
+        void Write(string text);
     }
 }

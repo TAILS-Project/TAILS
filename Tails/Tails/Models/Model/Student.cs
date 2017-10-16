@@ -5,19 +5,15 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tails.Models.Abstractions;
+
 
 namespace Tails.Models.Model
 {
-    public class Student : IStudent
+    public class Student
     {
 
-        public Student(int id, string firstName, string lastName, string username)
+        public Student()
         {
-            this.Id = id;
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.Username = username;
         }
 
         [Range(1, 100)]
@@ -26,7 +22,7 @@ namespace Tails.Models.Model
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
-        
+
         public string Username { get; set; }
 
     }
