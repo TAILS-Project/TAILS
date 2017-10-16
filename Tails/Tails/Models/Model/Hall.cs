@@ -5,7 +5,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tails.Models.Abstractions;
 
 namespace Tails.Models.Model
 {
@@ -24,6 +23,6 @@ namespace Tails.Models.Model
 
         public string Name { get; set; }
 
-        public string Picture { get; set; }
+        public string Image { get; set; }
     }
 }

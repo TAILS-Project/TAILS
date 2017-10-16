@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tails.Models.Abstractions;
+using Tails.Models.Model;
 
 namespace Tails.Core.Providers
 {
     public interface IDatabase
     {
-        IList<ICourse> Courses { get; }
-        IList<IExam> Exams { get; }
-        IList<IHall> Halls { get; }
-        IList<ISeat> Seats { get; }
-        IList<IStudent> Students { get; }
+        IList<Course> Courses { get; }
+        IList<Exam> Exams { get; }
+        IList<Hall> Halls { get; }
+        IList<Seat> Seats { get; }
+        IList<Student> Students { get; }
     }
 }

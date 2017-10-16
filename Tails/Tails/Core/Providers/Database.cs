@@ -3,28 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tails.Models.Abstractions;
+using Tails.Models.Model;
 
 namespace Tails.Core.Providers
 {
-    public class Database : IDatabase
+    public class Database
     {
-        private readonly List<ICourse> courses;
-        private readonly List<IExam> exams;
-        private readonly List<IHall> halls;
-        private readonly List<ISeat> seats;
-        private readonly List<IStudent> students;
+        private readonly List<Course> courses;
+        private readonly List<Exam> exams;
+        private readonly List<Hall> halls;
+        private readonly List<Seat> seats;
+        private readonly List<Student> students;
 
         public Database()
         {
-            this.courses = new List<ICourse>();
-            this.exams = new List<IExam>();
-            this.halls = new List<IHall>();
-            this.seats = new List<ISeat>();
-            this.students = new List<IStudent>();
+            this.courses = new List<Course>();
+            this.exams = new List<Exam>();
+            this.halls = new List<Hall>();
+            this.seats = new List<Seat>();
+            this.students = new List<Student>();
         }
 
-        public IList<ICourse> Courses
+        public IList<Course> Courses
         {
             get
             {
@@ -32,7 +32,7 @@ namespace Tails.Core.Providers
             }
         }
 
-        public IList<IExam> Exams
+        public IList<Exam> Exams
         {
             get
             {
@@ -40,7 +40,7 @@ namespace Tails.Core.Providers
             }
         }
 
-        public IList<IHall> Halls
+        public IList<Hall> Halls
         {
             get
             {
@@ -48,7 +48,7 @@ namespace Tails.Core.Providers
             }
         }
 
-        public IList<ISeat> Seats
+        public IList<Seat> Seats
         {
             get
             {
@@ -56,7 +56,7 @@ namespace Tails.Core.Providers
             }
         }
 
-        public IList<IStudent> Students
+        public IList<Student> Students
         {
             get
             {

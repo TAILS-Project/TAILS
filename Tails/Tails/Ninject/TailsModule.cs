@@ -22,9 +22,6 @@ namespace Tails.Ninject
 
             this.Bind<ITailsFactory>().To<TailsFactory>();
             this.Bind<ICommandFactory>().To<CommandFactory>();
-
-            this.Bind<IDatabase>().To<Database>();
-
         }
     }
 }

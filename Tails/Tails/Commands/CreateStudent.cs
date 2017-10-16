@@ -47,7 +47,7 @@ namespace Tails.Commands
                 throw new ArgumentException("Failed to parse CreateStudent command parameters.");
             }
 
-            var student = this.factory.CreateStudent(id, firstName, lastName, username);
+            var student = this.factory.CreateStudent();
             this.database.Students.Add(student);
 
             this.context.Students.Add(student); // tuk ne sum sigurna kude gresha

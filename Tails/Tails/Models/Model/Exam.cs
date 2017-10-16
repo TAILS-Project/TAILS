@@ -14,7 +14,7 @@ namespace Tails.Models.Model
                 
         public Exam()
         {
-                    }
+        }
 
         [Range(1, 1000)]
         public int CourseId { get; set; }
