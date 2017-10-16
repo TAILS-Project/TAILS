@@ -3,22 +3,18 @@
     "id": 1,
     "courseName": "C# Advanced"
   },
- 
   {
     "id": 2,
     "courseName": "OOP"
   },
-
   {
     "id": 3,
     "courseName": "DSA"
   },
-
   {
     "id": 4,
     "courseName": "HQC"
   },
-
   {
     "id": 5,
     "courseName": "FE"

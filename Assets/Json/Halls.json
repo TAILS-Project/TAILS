@@ -2,13 +2,13 @@
   {
     "id": 1,
     "capacity": 41,
-     "name": "Community",
-    "picture": "../Halls/community.jpg"
+    "name": "Community",
+    "picture": "../../../../Assets/Images/community.jpg"
   },
   {
     "id": 2,
     "capacity": 160,
     "name": "Enterprise",
-    "picture": "../Halls/enterprise.jpg"
+    "picture": "../../../../Assets/Images/enterprise.jpg"
   }
 ]

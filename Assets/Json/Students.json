@@ -1,16 +1,15 @@
 ﻿[
   {
     "id": 1,
-    "firstName": "Anjelo",
+    "firstName": "Anzhelo",
     "lastName": "Petkov",
     "username": "Metal.Destructor"
   },
-
   {
     "id": 2,
     "firstName": "Atanas",
-    "lastName": "terziev",
-    "username": "Атанас Терзиев"
+    "lastName": "Terziev",
+    "username": "naskoprasko"
   },
   {
     "id": 3,
@@ -18,14 +17,12 @@
     "lastName": "Angelov",
     "username": "georgi.angelov"
   },
-
   {
     "id": 4,
     "firstName": "Georgi",
     "lastName": "Georgiev",
     "username": "ggeorgievx"
   },
-
   {
     "id": 5,
     "firstName": "Georgi",
@@ -50,7 +47,6 @@
     "lastName": "Yordanov",
     "username": "dimi192"
   },
-
   {
     "id": 9,
     "firstName": "Ditmar",
@@ -99,7 +95,6 @@
     "lastName": "Bobchev",
     "username": "LyubenST"
   },
-
   {
     "id": 17,
     "firstName": "Martin",
@@ -127,8 +122,8 @@
   {
     "id": 21,
     "firstName": "Nikola",
-    "lastName": "Stanojchev",
-    "username": ""
+    "lastName": "Stanoychev",
+    "username": "kolio_softuerista"
   },
   {
     "id": 22,
@@ -166,7 +161,6 @@
     "lastName": "Babalev",
     "username": "bgnoob"
   },
-
   {
     "id": 28,
     "firstName": "Taner",
