@@ -3,12 +3,12 @@
     "id": 1,
     "capacity": 41,
     "name": "Community",
-    "picture": "../../../../Assets/Images/community.jpg"
+    "image": "../../../../Assets/Images/community.jpg"
   },
   {
     "id": 2,
     "capacity": 160,
     "name": "Enterprise",
-    "picture": "../../../../Assets/Images/enterprise.jpg"
+    "image": "../../../../Assets/Images/enterprise.jpg"
   }
 ]
