@@ -1,0 +1,22 @@
+﻿[
+  {
+    "courseId": 1,
+    "dateTime": "2017-07-17"
+  },
+  {
+    "courseId": 2,
+    "dateTime": "2017-08-18"
+  },
+  {
+    "courseId": 3,
+    "dateTime": "2017-08-31"
+  },
+  {
+    "courseId": 4,
+    "dateTime": "2017-09-21"
+  },
+  {
+    "courseId": 6,
+    "dateTime": "2017-10-20"
+  }
+]

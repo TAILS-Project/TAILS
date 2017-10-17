@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAILS", "TAILS\TAILS.csproj", "{39517709-F270-4D28-9B9F-2E70C9927B65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39517709-F270-4D28-9B9F-2E70C9927B65}.Debug|x86.ActiveCfg = Debug|x86
+		{39517709-F270-4D28-9B9F-2E70C9927B65}.Debug|x86.Build.0 = Debug|x86
+		{39517709-F270-4D28-9B9F-2E70C9927B65}.Release|x86.ActiveCfg = Release|x86
+		{39517709-F270-4D28-9B9F-2E70C9927B65}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
