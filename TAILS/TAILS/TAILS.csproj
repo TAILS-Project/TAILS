@@ -43,6 +43,13 @@
     <Reference Include="mscorlib" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Bytes2you.Validation">
+      <HintPath>..\packages\Bytes2you.Validation.2.0.0.0\lib\portable-win+net40+sl40+wp+Xbox40\Bytes2you.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.3.1\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="StartUp.cs" />
@@ -55,6 +62,25 @@
     <Compile Include="Core\Providers\JSONReader.cs" />
     <Compile Include="Core\Providers\XMLReader.cs" />
     <Compile Include="Core\Providers\IFileReader.cs" />
+    <Compile Include="Core\Providers\ICommandParser.cs" />
+    <Compile Include="Commands\Contracts\ICommand.cs" />
+    <Compile Include="Core\Providers\CommandParser.cs" />
+    <Compile Include="Core\Factories\ICommandFactory.cs" />
+    <Compile Include="Core\Providers\IReader.cs" />
+    <Compile Include="Core\Providers\IWriter.cs" />
+    <Compile Include="Core\Providers\ConsoleWriter.cs" />
+    <Compile Include="Core\Providers\ConsoleReader.cs" />
+    <Compile Include="Core\Factories\CommandFactory.cs" />
+    <Compile Include="Core\IEngine.cs" />
+    <Compile Include="Core\Engine.cs" />
+    <Compile Include="Commands\CreateStudentCommand.cs" />
+    <Compile Include="Commands\PrintHelpCommand.cs" />
+    <Compile Include="Commands\GenerateSeatsMappingCommand.cs" />
+    <Compile Include="Commands\DeleteStudentByIdCommand.cs" />
+    <Compile Include="Commands\UpdateExamDateTimeCommand.cs" />
+    <Compile Include="Data\ITAILSEntities.cs" />
+    <Compile Include="Data\TAILSEntities.cs" />
+    <Compile Include="Ninject\TAILSModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Data\.DS_Store" />
@@ -74,6 +100,11 @@
     <Folder Include="Models\" />
     <Folder Include="Core\" />
     <Folder Include="Core\Providers\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Commands\Contracts\" />
+    <Folder Include="Core\Factories\" />
+    <Folder Include="Data\" />
+    <Folder Include="Ninject\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
