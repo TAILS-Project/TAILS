@@ -35,18 +35,14 @@ namespace Tails
             //}
             //Console.WriteLine(courses[3].CourseName);
 
-            string pattern = @"<courseId>[\s\S]*?<\/courseId>";
-            string pattern1 = @"<dateTime>[\s\S]*?<\/dateTime>";
             List<Exam> exams = new List<Exam>();
             XmlDocument doc = new XmlDocument();
             doc.Load("../../App_Data/Exams.xml");
             XmlNode rootNode = doc.DocumentElement;
             foreach (XmlNode child in rootNode.ChildNodes)
             {
-                Match match = Regex.Match(child.InnerXml, pattern);
-                int courseId = int.Parse(match.Value.Replace("<courseId>", "").Replace(@"</courseId>", ""));
-                Match match1 = Regex.Match(child.InnerXml, pattern1);
-                DateTime dateTime = DateTime.Parse(match1.Value.Replace("<dateTime>", "").Replace(@"</dateTime>", ""));
+                int courseId = int.Parse(child["courseId"].InnerText);
+                DateTime dateTime = DateTime.Parse(child["dateTime"].InnerText);
                 exams.Add(new Exam
                 {
                     CourseId = courseId,
