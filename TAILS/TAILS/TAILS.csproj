@@ -40,6 +40,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="StartUp.cs" />
@@ -49,6 +52,9 @@
     <Compile Include="Models\Hall.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Seat.cs" />
+    <Compile Include="Core\Providers\JSONReader.cs" />
+    <Compile Include="Core\Providers\XMLReader.cs" />
+    <Compile Include="Core\Providers\IFileReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Data\.DS_Store" />
@@ -66,6 +72,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Providers\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
