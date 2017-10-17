@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Xml.Serialization;
 
 namespace Tails.Models.Model
 {
@@ -13,12 +13,11 @@ namespace Tails.Models.Model
     {
         public Course()
         {
-          
         }
 
         [Range(1, 1000)]
         public int Id { get; set; }
-        
+
         public string CourseName { get; set; }
        
 

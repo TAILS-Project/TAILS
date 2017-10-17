@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<examsArray>
+	<exam>
+		<courseId>1</courseId>
+		<dateTime>2017-07-17</dateTime>
+	</exam>
+	<exam>
+		<courseId>2</courseId>
+		<dateTime>2017-08-18</dateTime>
+	</exam>
+	<exam>
+		<courseId>3</courseId>
+		<dateTime>2017-08-31</dateTime>
+	</exam>
+	<exam>
+		<courseId>4</courseId>
+		<dateTime>2017-08-31</dateTime>
+	</exam>
+	<exam>
+		<courseId>6</courseId>
+		<dateTime>2017-08-31</dateTime>
+	</exam>
+</examsArray>

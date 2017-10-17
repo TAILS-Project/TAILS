@@ -1,12 +1,10 @@
 [
   {
-    "id": 1,
     "capacity": 41,
     "name": "Community",
     "image": "../../../../Assets/Images/community.jpg"
   },
   {
-    "id": 2,
     "capacity": 160,
     "name": "Enterprise",
     "image": "../../../../Assets/Images/enterprise.jpg"
