@@ -2,6 +2,9 @@
 using System.Linq;
 using TAILS.Migrations;
 using System.Data.Entity;
+using Ninject;
+using TAILS.Ninject;
+using TAILS.Core;
 
 namespace TAILS
 {
@@ -14,6 +17,10 @@ namespace TAILS
             {
                 var exams = context.Exams.ToList();
             }
+
+            IKernel kernel = new StandardKernel(new TAILSModule());
+            IEngine engine = kernel.Get<IEngine>();
+            engine.Start();
         }
     }
 }
