@@ -23,6 +23,10 @@ namespace TAILS.Commands
 
         public string Execute(IList<string> parameters)
         {
+
+
+
+
             //parse parameters (don't forget hallName!)
             string hallName = "Community";
 

@@ -1,8 +1,8 @@
 ﻿using TAILS.Data;
+using System.Linq;
 using Bytes2you.Validation;
 using TAILS.Commands.Contracts;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace TAILS.Commands
 {
@@ -24,7 +24,7 @@ namespace TAILS.Commands
 
             context.Students.Remove(delSt);
             context.SaveChanges();
-            return "Student Deleted.";
+            return $"Student with Id {temp} Deleted.";
         }
     }
 }

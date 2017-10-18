@@ -13,13 +13,11 @@ namespace TAILS.Commands
         public string Execute(IList<string> parameters)
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("CreateStudent -> Input parameters: FirstName LastName Username CourseIds");
             sb.AppendLine("DeleteStudent -> Input parameters: Id");
-            sb.AppendLine("GenerateSeatsMap -> Input parameters: examId hallId");
-            sb.AppendLine("UpdateExamDateTime -> Input parameters: examId newDateTime ");
+            sb.AppendLine("GenerateSeatsMap -> Input parameters: ExamId HallId");
+            sb.AppendLine("UpdateExamDateTime -> Input parameters: ExamId NewDateTime");
+            sb.AppendLine("CreateStudent -> Input parameters: FirstName LastName Username CourseIds");
 
-
-            //print info for all 5 commands (what parameters does each one take and what does it do) 
             return sb.ToString();
         }
     }
