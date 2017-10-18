@@ -16,7 +16,7 @@ namespace TAILS.Commands
             sb.AppendLine("DeleteStudent -> Input parameters: Id");
             sb.AppendLine("GenerateSeatsMapping -> Input parameters: ExamId HallId");
             sb.AppendLine("UpdateExamDateTime -> Input parameters: ExamId NewDateTime");
-            sb.AppendLine("CreateStudent -> Input parameters: FirstName LastName Username CourseIds");
+            sb.Append("CreateStudent -> Input parameters: FirstName LastName Username CourseIds");
 
             return sb.ToString();
         }

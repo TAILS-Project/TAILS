@@ -46,7 +46,6 @@ namespace TAILS.Commands
                     bf = BaseFont.CreateFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1252, BaseFont.EMBEDDED);
                     cb.SetFontAndSize(bf, 10);
                     cb.AddImage(img);
-
                     break;
                 case 2:
                     img = Image.GetInstance("../../App_Data/Images/enterprise.jpg");
@@ -55,7 +54,6 @@ namespace TAILS.Commands
                     bf = BaseFont.CreateFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1252, BaseFont.EMBEDDED);
                     cb.SetFontAndSize(bf, 7);
                     cb.AddImage(img);
-
                     break;
             }
             cb.SetColorFill(BaseColor.GREEN);
@@ -105,7 +103,8 @@ namespace TAILS.Commands
             writer.Close();
             fs.Close();
 
-            return $"PDF file generated successfully.";
+            int numOfFreeSeats = hallId == 1 ? 41 - students.Count() : 160 - students.Count();
+            return $"PDF file generated successfully: {students.Count()} students placed in hall {hallName} for {context.Courses.Where(c => c.Id == examId).Single().CourseName}'s exam. There are {numOfFreeSeats} free seats left.";
         }
 
         private void ShuffleStudents(List<Student> students)

@@ -1,9 +1,9 @@
 ﻿using TAILS.Data;
+using System.Linq;
+using TAILS.Models;
 using Bytes2you.Validation;
 using TAILS.Commands.Contracts;
 using System.Collections.Generic;
-using TAILS.Models;
-using System.Linq;
 
 namespace TAILS.Commands
 {
@@ -41,8 +41,7 @@ namespace TAILS.Commands
             context.Students.Add(newStudent);
             context.SaveChanges();
 
-
-            return "Student created";
+            return $"Created student with Username {userName}.";
         }
     }
 }
