@@ -2,6 +2,7 @@
 using Bytes2you.Validation;
 using TAILS.Commands.Contracts;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TAILS.Commands
 {
@@ -18,7 +19,12 @@ namespace TAILS.Commands
 
         public string Execute(IList<string> parameters)
         {
-            throw new System.NotImplementedException();
+            var temp = int.Parse(parameters[0]);
+            var delSt = context.Students.First(st => st.Id == temp);
+
+            context.Students.Remove(delSt);
+            context.SaveChanges();
+            return "Student Deleted.";
         }
     }
 }
