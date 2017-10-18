@@ -54,11 +54,11 @@ namespace TAILS.Core
                         break;
                     }
                     this.ProcessCommand(commandAsString);
-                    Console.WriteLine(Delimiter);
+                    writer.WriteLine(Delimiter);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    writer.WriteLine(ex.Message);
                 }
             }
         }
@@ -116,7 +116,7 @@ namespace TAILS.Core
             var command = this.parser.ParseCommand(commandAsString);
             var parameters = this.parser.ParseParameters(commandAsString);
             var result = command.Execute(parameters);
-            Console.WriteLine(result);
+            writer.WriteLine(result);
         }
     }
 }
