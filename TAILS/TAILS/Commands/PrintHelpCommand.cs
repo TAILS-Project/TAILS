@@ -1,6 +1,4 @@
-﻿using TAILS.Data;
-using System.Text;
-using Bytes2you.Validation;
+﻿using System.Text;
 using TAILS.Commands.Contracts;
 using System.Collections.Generic;
 
@@ -8,8 +6,6 @@ namespace TAILS.Commands
 {
     public class PrintHelpCommand : ICommand
     {
-        private readonly ITAILSEntities context;
-
         public PrintHelpCommand()
         {
         }

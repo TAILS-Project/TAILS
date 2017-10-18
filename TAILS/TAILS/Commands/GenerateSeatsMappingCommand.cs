@@ -69,7 +69,7 @@ namespace TAILS.Commands
             return $"PDF file generated successfully.";
         }
 
-        public void ShuffleStudents(List<Student> students)
+        private void ShuffleStudents(List<Student> students)
         {
             Random rng = new Random();
             int n = students.Count;

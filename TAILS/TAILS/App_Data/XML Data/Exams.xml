@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <examsArray>
 	<exam>
-		<courseId>1</courseId>
+		<id>1</id>
 		<dateTime>2017-07-17</dateTime>
 	</exam>
 	<exam>
-		<courseId>2</courseId>
+		<id>2</id>
 		<dateTime>2017-08-18</dateTime>
 	</exam>
 	<exam>
-		<courseId>3</courseId>
+		<id>3</id>
 		<dateTime>2017-08-31</dateTime>
 	</exam>
 	<exam>
-		<courseId>4</courseId>
+		<id>4</id>
 		<dateTime>2017-08-31</dateTime>
 	</exam>
 	<exam>
-		<courseId>6</courseId>
+		<id>6</id>
 		<dateTime>2017-08-31</dateTime>
 	</exam>
 </examsArray>
