@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TAILS.Models
 {
@@ -10,7 +11,8 @@ namespace TAILS.Models
         }
 
         [Range(1, 1000)]
-        public int CourseId { get; set; }
+        [ForeignKey("Course")]
+        public int Id { get; set; }
 
         [Required]
         public DateTime DateTime { get; set; }

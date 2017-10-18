@@ -1,4 +1,6 @@
 ﻿using System;
+using TAILS.Data;
+using System.Linq;
 using Bytes2you.Validation;
 using TAILS.Core.Providers;
 
@@ -12,20 +14,32 @@ namespace TAILS.Core
         private readonly IReader reader;
         private readonly IWriter writer;
         private readonly ICommandParser parser;
+        private readonly ITAILSEntities context;
 
-        public Engine(IReader reader, IWriter writer, ICommandParser parser)
+        public Engine(IReader reader, IWriter writer, ICommandParser parser, ITAILSEntities context)
         {
             Guard.WhenArgument(reader, "reader").IsNull().Throw();
             Guard.WhenArgument(writer, "writer").IsNull().Throw();
             Guard.WhenArgument(parser, "parser").IsNull().Throw();
+            Guard.WhenArgument(context, "context").IsNull().Throw();
 
             this.reader = reader;
             this.writer = writer;
             this.parser = parser;
+            this.context = context;
         }
 
         public void Start()
         {
+            if (context.Courses.Count() == 0 &&
+                context.Exams.Count() == 0 &&
+                context.Halls.Count() == 0 &&
+                context.Seats.Count() == 0 &&
+                context.Students.Count() == 0)
+            {
+                InitDatabase();
+            }
+
             while (true)
             {
                 try
@@ -44,6 +58,11 @@ namespace TAILS.Core
                     Console.WriteLine(ex.Message);
                 }
             }
+        }
+
+        private void InitDatabase()
+        {
+            throw new NotImplementedException();
         }
 
         private void ProcessCommand(string commandAsString)

@@ -10,11 +10,8 @@ namespace TAILS.Commands
     {
         private readonly ITAILSEntities context;
 
-        public PrintHelpCommand(ITAILSEntities context)
+        public PrintHelpCommand()
         {
-            Guard.WhenArgument(context, "context").IsNull().Throw();
-
-            this.context = context;
         }
 
         public string Execute(IList<string> parameters)

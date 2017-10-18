@@ -25,11 +25,11 @@ namespace TAILS.Core.Providers
                         });
                         break;
                     case "examsArray":
-                        int courseId = int.Parse(child["courseId"].InnerText);
+                        int id = int.Parse(child["courseId"].InnerText);
                         DateTime dateTime = DateTime.Parse(child["dateTime"].InnerText);
                         listT.Add((T)(object)new Exam
                         {
-                            CourseId = courseId,
+                            Id = id,
                             DateTime = dateTime
                         });
                         break;
