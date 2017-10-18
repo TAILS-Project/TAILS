@@ -13,10 +13,6 @@ namespace TAILS
         public static void Main()
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<TAILSEntities, Configuration>());
-            using (var context = new TAILSEntities())
-            {
-                var exams = context.Exams.ToList();
-            }
 
             IKernel kernel = new StandardKernel(new TAILSModule());
             IEngine engine = kernel.Get<IEngine>();
