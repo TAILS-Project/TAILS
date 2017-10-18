@@ -20,7 +20,10 @@ namespace TAILS.Ninject
             this.Bind<ICommand>().To<PrintHelpCommand>().Named("PrintHelp");
             this.Bind<ICommand>().To<UpdateExamDateTimeCommand>().Named("UpdateExamDateTime");
 
-            this.Bind<ITAILSEntities>().To<ITAILSEntities>();
+            this.Bind<IReader>().To<ConsoleReader>();
+            this.Bind<IWriter>().To<ConsoleWriter>();
+
+            this.Bind<ITAILSEntities>().To<TAILSEntities>();
             this.Bind<IEngine>().To<Engine>();
             this.Bind<ICommandFactory>().To<CommandFactory>();
 
