@@ -24,6 +24,7 @@ namespace TAILS.Commands
 
             context.Students.Remove(delSt);
             context.SaveChanges();
+
             return $"Student with Id {temp} Deleted.";
         }
     }

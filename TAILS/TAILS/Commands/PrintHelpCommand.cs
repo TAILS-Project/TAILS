@@ -14,7 +14,7 @@ namespace TAILS.Commands
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("DeleteStudent -> Input parameters: Id");
-            sb.AppendLine("GenerateSeatsMap -> Input parameters: ExamId HallId");
+            sb.AppendLine("GenerateSeatsMapping -> Input parameters: ExamId HallId");
             sb.AppendLine("UpdateExamDateTime -> Input parameters: ExamId NewDateTime");
             sb.AppendLine("CreateStudent -> Input parameters: FirstName LastName Username CourseIds");
 

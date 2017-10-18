@@ -26,7 +26,7 @@ namespace TAILS.Ninject
             this.Bind<ICommand>().To<PrintHelpCommand>().Named("PrintHelp");
             this.Bind<ICommand>().To<CreateStudentCommand>().Named("CreateStudent");
             this.Bind<ICommand>().To<DeleteStudentByIdCommand>().Named("DeleteStudent");
-            this.Bind<ICommand>().To<GenerateSeatsMappingCommand>().Named("GenerateSeatsMap");
+            this.Bind<ICommand>().To<GenerateSeatsMappingCommand>().Named("GenerateSeatsMapping");
             this.Bind<ICommand>().To<UpdateExamDateTimeCommand>().Named("UpdateExamDateTime");
 
             this.Bind<IFileReader<Exam>>().To<XMLReader<Exam>>().Named("ExamReaderXML");
