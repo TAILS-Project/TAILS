@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using TAILS.Data;
 using System.Linq;
 using Bytes2you.Validation;
@@ -62,7 +63,11 @@ namespace TAILS.Core
 
         private void InitDatabase()
         {
-            throw new NotImplementedException();
+            string[] JSONFilesNames = Directory.GetFiles("../App_Data/JSON_Data");
+            foreach (string s in JSONFilesNames)
+            {
+                Console.WriteLine(s);
+            }
         }
 
         private void ProcessCommand(string commandAsString)
