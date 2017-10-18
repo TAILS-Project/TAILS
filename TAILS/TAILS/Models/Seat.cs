@@ -9,7 +9,6 @@ namespace TAILS.Models
         {
         }
 
-        [Range(1, 1000)]
         public int Id { get; set; }
 
         [Required]

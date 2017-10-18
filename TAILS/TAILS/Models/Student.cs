@@ -12,19 +12,18 @@ namespace TAILS.Models
             this.courses = new HashSet<Course>();
         }
 
-        [Range(1, 1000)]
         public int Id { get; set; }
 
         [Required]
-        [StringLength(40, MinimumLength = 5, ErrorMessage = "The FirstName's length should be between 5 and 40 symbols long.")]
+        [StringLength(40)]
         public string FirstName { get; set; }
 
         [Required]
-        [StringLength(40, MinimumLength = 5, ErrorMessage = "The LastName's length should be between 5 and 40 symbols long.")]
+        [StringLength(40)]
         public string LastName { get; set; }
 
         [Required]
-        [StringLength(40, MinimumLength = 5, ErrorMessage = "The Username's length should be between 5 and 40 symbols long.")]
+        [StringLength(40)]
         public string Username { get; set; }
 
         public virtual ICollection<Course> Courses

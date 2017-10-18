@@ -12,11 +12,10 @@ namespace TAILS.Models
             this.students = new HashSet<Student>();
         }
 
-        [Range(1, 1000)]
         public int Id { get; set; }
 
         [Required]
-        [StringLength(40, MinimumLength = 5, ErrorMessage = "The CourseName's length should be between 5 and 40 symbols long.")]
+        [StringLength(40)]
         public string CourseName { get; set; }
 
         public virtual Exam Exam { get; set; }

@@ -10,7 +10,6 @@ namespace TAILS.Models
         {
         }
 
-        [Range(1, 1000)]
         [ForeignKey("Course")]
         public int Id { get; set; }
 

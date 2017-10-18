@@ -2,8 +2,10 @@
 using System.IO;
 using TAILS.Data;
 using System.Linq;
+using TAILS.Models;
 using Bytes2you.Validation;
 using TAILS.Core.Providers;
+using System.Collections.Generic;
 
 namespace TAILS.Core
 {
@@ -63,11 +65,46 @@ namespace TAILS.Core
 
         private void InitDatabase()
         {
-            string[] JSONFilesNames = Directory.GetFiles("../../App_Data/JSON_Data");
-            foreach (string s in JSONFilesNames)
+            JSONReader<Seat> seatsReader = new JSONReader<Seat>();
+            List<Seat> seats = seatsReader.ReadFile("../../App_Data/JSON_Data/Seats.json");
+            foreach (Seat seat in seats)
             {
-                Console.WriteLine(s);
+                context.Seats.Add(seat);
             }
+
+            JSONReader<Student> studentsReader = new JSONReader<Student>();
+            List<Student> students = studentsReader.ReadFile("../../App_Data/JSON_Data/Students.json");
+            foreach (Student student in students)
+            {
+                context.Students.Add(student);
+            }
+
+            XMLReader<Course> coursesReader = new XMLReader<Course>();
+            List<Course> courses = coursesReader.ReadFile("../../App_Data/XML_Data/Courses.xml");
+            foreach (Course course in courses)
+            {
+                context.Courses.Add(course);
+                foreach (Student student in students)
+                {
+                    student.Courses.Add(course);
+                }
+            }
+
+            XMLReader<Exam> examsReader = new XMLReader<Exam>();
+            List<Exam> exams = examsReader.ReadFile("../../App_Data/XML_Data/Exams.xml");
+            foreach (Exam exam in exams)
+            {
+                context.Exams.Add(exam);
+            }
+            
+            JSONReader<Hall> hallsReader = new JSONReader<Hall>();
+            List<Hall> halls = hallsReader.ReadFile("../../App_Data/JSON_Data/Halls.json");
+            foreach (Hall hall in halls)
+            {
+                context.Halls.Add(hall);
+            }
+
+            context.SaveChanges();
         }
 
         private void ProcessCommand(string commandAsString)
