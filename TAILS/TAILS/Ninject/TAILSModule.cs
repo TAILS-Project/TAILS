@@ -1,12 +1,11 @@
-﻿using Newtonsoft.Json;
-using Ninject.Modules;
-using TAILS.Commands;
-using TAILS.Commands.Contracts;
+﻿using TAILS.Data;
 using TAILS.Core;
+using TAILS.Models;
+using TAILS.Commands;
+using Ninject.Modules;
 using TAILS.Core.Factories;
 using TAILS.Core.Providers;
-using TAILS.Data;
-using TAILS.Models;
+using TAILS.Commands.Contracts;
 
 namespace TAILS.Ninject
 {

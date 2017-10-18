@@ -63,7 +63,7 @@ namespace TAILS.Core
 
         private void InitDatabase()
         {
-            string[] JSONFilesNames = Directory.GetFiles("../App_Data/JSON_Data");
+            string[] JSONFilesNames = Directory.GetFiles("../../App_Data/JSON_Data");
             foreach (string s in JSONFilesNames)
             {
                 Console.WriteLine(s);

@@ -1,10 +1,10 @@
-﻿using TAILS.Data;
+﻿using Ninject;
+using TAILS.Data;
+using TAILS.Core;
 using System.Linq;
+using TAILS.Ninject;
 using TAILS.Migrations;
 using System.Data.Entity;
-using Ninject;
-using TAILS.Ninject;
-using TAILS.Core;
 
 namespace TAILS
 {
