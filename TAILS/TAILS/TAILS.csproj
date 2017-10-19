@@ -64,7 +64,7 @@
       <DependentUpon>201710191135421_RenameNameToHallName.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Ninject\TailsModule.cs" />
+    <Compile Include="Ninject\TAILSModule.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Course.cs" />
