@@ -15,15 +15,15 @@ namespace TAILS.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(40)]
+        [StringLength(40, ErrorMessage = "The Student's first name shouldn't be longer than 40 symbols.")]
         public string FirstName { get; set; }
 
         [Required]
-        [StringLength(40)]
+        [StringLength(40, ErrorMessage = "The Student's last name shouldn't be longer than 40 symbols.")]
         public string LastName { get; set; }
 
         [Required]
-        [StringLength(40)]
+        [StringLength(40, ErrorMessage = "The Student's user name shouldn't be longer than 40 symbols.")]
         public string Username { get; set; }
 
         public virtual ICollection<Course> Courses

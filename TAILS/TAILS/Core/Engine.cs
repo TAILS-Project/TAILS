@@ -34,7 +34,7 @@ namespace TAILS.Core
 
         public void Start()
         {
-            writer.WriteLine("Welcome to TAILS (Telerik Academy Internal Learning System! Type PrintHelp for the full list of commands available.");
+            writer.WriteLine("Welcome to TAILS (Telerik Academy Integrated Learning System)! Type PrintHelp for the full list of commands available.");
 
             if (context.Courses.Count() == 0 &&
                 context.Exams.Count() == 0 &&

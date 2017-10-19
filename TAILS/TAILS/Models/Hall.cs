@@ -15,7 +15,7 @@ namespace TAILS.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(40)]
+        [StringLength(40, ErrorMessage = "The Hall's name shouldn't be longer than 40 symbols.")]
         public string Name { get; set; }
 
         [Required]
