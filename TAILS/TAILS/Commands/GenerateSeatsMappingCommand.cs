@@ -103,8 +103,8 @@ namespace TAILS.Commands
             writer.Close();
             fs.Close();
 
-            int numOfFreeSeats = hallId == 1 ? 41 - students.Count() : 160 - students.Count();
-            return $"PDF file generated successfully: {students.Count()} students placed in hall {hallName} for {context.Courses.Where(c => c.Id == examId).Single().CourseName}'s exam. There are {numOfFreeSeats} free seats left.";
+            int numOfFreeSeatsLeft = hallId == 1 ? 41 - students.Count() : 160 - students.Count();
+            return $"PDF file generated successfully: {students.Count()} students placed in {hallName} hall for the {context.Courses.Where(c => c.Id == examId).Single().CourseName}'s exam. There are {numOfFreeSeatsLeft} free seats left.";
         }
 
         private void ShuffleStudents(List<Student> students)

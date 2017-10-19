@@ -19,13 +19,13 @@ namespace TAILS.Commands
 
         public string Execute(IList<string> parameters)
         {
-            var temp = int.Parse(parameters[0]);
-            var delSt = context.Students.First(st => st.Id == temp);
+            var id = int.Parse(parameters[0]);
+            var delSt = context.Students.First(st => st.Id == id);
 
             context.Students.Remove(delSt);
             context.SaveChanges();
 
-            return $"Deleted student with Id {temp}.";
+            return $"Deleted student with Username {delSt.Username} and Id {id}.";
         }
     }
 }

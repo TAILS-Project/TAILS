@@ -41,7 +41,9 @@ namespace TAILS.Commands
             context.Students.Add(newStudent);
             context.SaveChanges();
 
-            return $"Created student with Username {userName}.";
+            int id = context.Students.OrderByDescending(s => s.Id).FirstOrDefault().Id;
+
+            return $"Created student with Username {userName} and Id {id}.";
         }
     }
 }
