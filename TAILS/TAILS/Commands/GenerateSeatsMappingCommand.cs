@@ -26,6 +26,7 @@ namespace TAILS.Commands
         {
             int examId = int.Parse(parameters[0]);
             string examName = context.Courses.Find(examId).CourseName;
+            DateTime examDateTime = context.Exams.Find(examId).DateTime;
             int hallId = int.Parse(parameters[1]);
             string hallName = context.Halls.Find(hallId).HallName;
 
@@ -80,6 +81,8 @@ namespace TAILS.Commands
                         cb.SetTextMatrix(270, 810);
                         cb.ShowText($"ExamName: {examName}");
                         cb.SetTextMatrix(270, 795);
+                        cb.ShowText($"ExamStartingTime: {examDateTime.AddHours(12)}");
+                        cb.SetTextMatrix(270, 780);
                         cb.ShowText($"HallName: {hallName}");
                         cb.SetColorFill(BaseColor.GREEN);
 
@@ -103,7 +106,9 @@ namespace TAILS.Commands
                     cb.ShowText($"DateTime of PDF generation: {DateTime.Now}");
                     cb.SetTextMatrix(50, 784);
                     cb.ShowText($"ExamName: {examName}");
-                    cb.SetTextMatrix(50, 765);
+                    cb.SetTextMatrix(50, 768);
+                    cb.ShowText($"ExamStartingTime: {examDateTime.AddHours(12)}");
+                    cb.SetTextMatrix(50, 754);
                     cb.ShowText($"HallName: {hallName}");
                     cb.SetColorFill(BaseColor.GREEN);
                     cb.SetFontAndSize(BaseFont.CreateFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1252, BaseFont.EMBEDDED), 7);
