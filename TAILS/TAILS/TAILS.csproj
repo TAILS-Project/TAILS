@@ -64,6 +64,7 @@
       <DependentUpon>201710191135421_RenameNameToHallName.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Ninject\TAILSModule.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Course.cs" />
@@ -90,9 +91,9 @@
     <Compile Include="Commands\GenerateSeatsMappingCommand.cs" />
     <Compile Include="Commands\DeleteStudentByIdCommand.cs" />
     <Compile Include="Commands\UpdateExamDateTimeCommand.cs" />
+    <Compile Include="Commands\ListSeatsCommand.cs" />
     <Compile Include="Data\ITAILSEntities.cs" />
     <Compile Include="Data\TAILSEntities.cs" />
-    <Compile Include="Ninject\TAILSModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Data\.DS_Store" />
