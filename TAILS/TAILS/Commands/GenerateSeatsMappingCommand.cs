@@ -25,6 +25,7 @@ namespace TAILS.Commands
         public string Execute(IList<string> parameters)
         {
             int examId = int.Parse(parameters[0]);
+            string examName = context.Courses.Find(examId).CourseName;
             int hallId = int.Parse(parameters[1]);
             string hallName = context.Halls.Find(hallId).HallName;
 
@@ -56,7 +57,6 @@ namespace TAILS.Commands
                     cb.AddImage(img);
                     break;
             }
-            cb.SetColorFill(BaseColor.GREEN);
             cb.BeginText();
 
             List<Seat> seats = new List<Seat>();
@@ -74,6 +74,15 @@ namespace TAILS.Commands
                 case 1:
                     foreach (Student student in students)
                     {
+                        cb.SetColorFill(BaseColor.BLUE);
+                        cb.SetTextMatrix(270, 825);
+                        cb.ShowText($"DateTime of PDF generation: {DateTime.Now}");
+                        cb.SetTextMatrix(270, 810);
+                        cb.ShowText($"ExamName: {examName}");
+                        cb.SetTextMatrix(270, 795);
+                        cb.ShowText($"HallName: {hallName}");
+                        cb.SetColorFill(BaseColor.GREEN);
+
                         Seat seat = context.Seats.Find(curSeat);
                         curSeat++;
                         if (seat.Id < 37)
@@ -88,6 +97,17 @@ namespace TAILS.Commands
                     }
                     break;
                 case 2:
+                    cb.SetFontAndSize(BaseFont.CreateFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1252, BaseFont.EMBEDDED), 10);
+                    cb.SetColorFill(BaseColor.BLUE);
+                    cb.SetTextMatrix(50, 800);
+                    cb.ShowText($"DateTime of PDF generation: {DateTime.Now}");
+                    cb.SetTextMatrix(50, 784);
+                    cb.ShowText($"ExamName: {examName}");
+                    cb.SetTextMatrix(50, 765);
+                    cb.ShowText($"HallName: {hallName}");
+                    cb.SetColorFill(BaseColor.GREEN);
+                    cb.SetFontAndSize(BaseFont.CreateFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1252, BaseFont.EMBEDDED), 7);
+
                     curSeat += 41;
                     foreach (Student student in students)
                     {
