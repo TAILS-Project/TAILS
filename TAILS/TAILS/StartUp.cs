@@ -1,7 +1,6 @@
 ﻿using Ninject;
 using TAILS.Data;
 using TAILS.Core;
-using System.Linq;
 using TAILS.Ninject;
 using TAILS.Migrations;
 using System.Data.Entity;

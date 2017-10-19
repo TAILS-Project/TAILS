@@ -1,12 +1,12 @@
 [
   {
     "capacity": 41,
-    "name": "Community",
+    "hallName": "Community",
     "image": "../../App_Data/Images/community.jpg"
   },
   {
     "capacity": 160,
-    "name": "Enterprise",
+    "hallName": "Enterprise",
     "image": "../../App_Data/Images/enterprise.jpg"
   }
 ]

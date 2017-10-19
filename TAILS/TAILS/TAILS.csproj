@@ -59,6 +59,10 @@
     <Compile Include="Migrations\201710180919216_Init db.Designer.cs">
       <DependentUpon>201710180919216_Init db.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710191135421_RenameNameToHallName.cs" />
+    <Compile Include="Migrations\201710191135421_RenameNameToHallName.Designer.cs">
+      <DependentUpon>201710191135421_RenameNameToHallName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +111,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710180919216_Init db.resx">
       <DependentUpon>201710180919216_Init db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710191135421_RenameNameToHallName.resx">
+      <DependentUpon>201710191135421_RenameNameToHallName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

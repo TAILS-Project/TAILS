@@ -26,7 +26,7 @@ namespace TAILS.Commands
         {
             int examId = int.Parse(parameters[0]);
             int hallId = int.Parse(parameters[1]);
-            string hallName = context.Halls.Find(hallId).Name;
+            string hallName = context.Halls.Find(hallId).HallName;
 
             FileStream fs = new FileStream("result.pdf", FileMode.Create);
             Document document = new Document(PageSize.A4);

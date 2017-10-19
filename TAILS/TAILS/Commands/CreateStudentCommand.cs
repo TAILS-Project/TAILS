@@ -22,13 +22,13 @@ namespace TAILS.Commands
         {
             string firstName = parameters[0];
             string lastName = parameters[1];
-            string userName = parameters[2];
+            string username = parameters[2];
 
             Student newStudent = new Student()
             {
                 FirstName = firstName,
                 LastName = lastName,
-                Username = userName
+                Username = username
             };
 
             List<string> courseList = parameters.Skip(3).ToList();
@@ -43,7 +43,7 @@ namespace TAILS.Commands
 
             int id = context.Students.OrderByDescending(s => s.Id).FirstOrDefault().Id;
 
-            return $"Created student with Username {userName} and Id {id}.";
+            return $"Created student with Username {username} and Id {id}.";
         }
     }
 }
