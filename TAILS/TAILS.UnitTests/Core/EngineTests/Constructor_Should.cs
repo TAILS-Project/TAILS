@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
+﻿using Moq;
 using System;
 using TAILS.Core;
-using TAILS.Core.Providers;
 using TAILS.Data;
+using TAILS.Core.Providers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TAILS.UnitTests.Engine.EngineTests
+namespace TAILS.UnitTests.Core.EngineTests
 {
     [TestClass]
     public class Constructor_Should
