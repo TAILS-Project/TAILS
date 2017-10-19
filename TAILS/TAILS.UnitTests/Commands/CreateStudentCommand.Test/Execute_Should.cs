@@ -4,6 +4,8 @@ using Moq;
 using TAILS.Data;
 using TAILS.Models;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 
 namespace TAILS.UnitTests.Commands.CreateStudentCommand.Test
 {
@@ -12,29 +14,42 @@ namespace TAILS.UnitTests.Commands.CreateStudentCommand.Test
     {
         [TestMethod]
         public void ShouldCreateAddStudentToDatabase()
-        //ReturnSuccessMessage_WhenParametersAreValid()
         {
             // Arrange
+
             var contextMock = new Mock<ITAILSEntities>();
+            //var dbsetMock = new Mock<DbSet>();
 
             var firstName = "Mi";
             var lastName = "Iv";
-            var username = "Iv";
+            var username = "migldg";
+            var input = new List<string>() { firstName, lastName, username };
 
-            var studentMock = new Mock<Student>(firstName,lastName,username);
+            var studentDbSet = new Mock<DbSet<Student>>();
 
-            List<string> courseList = new List<string>();
+            var studentMock = new Mock<Student>();
+            var courseId = 1;
 
-            var courseId = 8;
+            var courses = new HashSet<Course>();
 
+            var courseMi = new Course();
+            courseMi.Id = courseId;
 
-            seasonMock.SetupGet(s => s.Courses)
-                .Returns(seasonCourses);
+            studentMock.Setup(x => x.Courses).Returns(courses);
+            contextMock.SetupGet(c => c.Students)
+                   .Returns(studentDbSet.Object);
 
-            databaseMock.SetupGet(d => d.Seasons)
-                .Returns(databaseSeasons);
+            studentMock.Object.Courses.Add(courseMi);
 
+            //Act
+            var command = new TAILS.Commands.CreateStudentCommand(contextMock.Object);
+            command.Execute(input);
+
+            //Assert
+            Assert.AreEqual(1, contextMock.Object.Students.Count());
 
         }
+               
     }
 }
+
