@@ -93,6 +93,7 @@
     <Compile Include="Data\ITAILSEntities.cs" />
     <Compile Include="Data\TAILSEntities.cs" />
     <Compile Include="Ninject\TAILSModule.cs" />
+    <Compile Include="Commands\ListSeatsCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Data\.DS_Store" />

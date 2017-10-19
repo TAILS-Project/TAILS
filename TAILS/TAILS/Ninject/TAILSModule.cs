@@ -24,6 +24,7 @@ namespace TAILS.Ninject
             this.Bind<IEngine>().To<Engine>();
 
             this.Bind<ICommand>().To<PrintHelpCommand>().Named("PrintHelp");
+            this.Bind<ICommand>().To<ListSeatsCommand>().Named("ListSeats");
             this.Bind<ICommand>().To<CreateStudentCommand>().Named("CreateStudent");
             this.Bind<ICommand>().To<DeleteStudentByIdCommand>().Named("DeleteStudent");
             this.Bind<ICommand>().To<GenerateSeatsMappingCommand>().Named("GenerateSeatsMapping");
