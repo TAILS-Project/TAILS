@@ -104,7 +104,7 @@ namespace TAILS.Commands
             fs.Close();
 
             int numOfFreeSeatsLeft = hallId == 1 ? 41 - students.Count() : 160 - students.Count();
-            return $"PDF file generated successfully: {students.Count()} students placed in {hallName} hall for the {context.Courses.Where(c => c.Id == examId).Single().CourseName}'s exam. There are {numOfFreeSeatsLeft} free seats left.";
+            return $"PDF file generated successfully: {students.Count()} students placed in {hallName} hall for the {context.Courses.Where(c => c.Id == examId).Single().CourseName}'s exam.\nThere are {numOfFreeSeatsLeft} free seats left.\nPlease find the newly generated PDF file (result.pdf) in your bin/Debug folder.";
         }
 
         private void ShuffleStudents(List<Student> students)

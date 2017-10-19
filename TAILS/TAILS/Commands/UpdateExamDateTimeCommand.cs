@@ -1,10 +1,10 @@
-﻿using TAILS.Data;
+﻿using System;
+using TAILS.Data;
+using System.Linq;
+using TAILS.Models;
 using Bytes2you.Validation;
 using TAILS.Commands.Contracts;
 using System.Collections.Generic;
-using System;
-using System.Linq;
-using TAILS.Models;
 
 namespace TAILS.Commands
 {
@@ -22,31 +22,28 @@ namespace TAILS.Commands
         public string Execute(IList<string> parameters)
         {
             int examId = 0;
-
             if (!int.TryParse(parameters[0], out examId))
             {
-                throw new ArgumentException("examid is invalid");
+                throw new ArgumentException("Invalid ExamId.");
             }
 
             Exam examToFind = context.Exams.Find(examId);
-
             if(examToFind == null)
             {
-                throw new ArgumentException("there is no such exam in the DB");
+                throw new ArgumentException("No exam with the provided ExamId fround in the DB.");
             }
 
             DateTime newDateTime;
             var joinedDate = string.Join(" ", parameters.Skip(1));
-
             if (!DateTime.TryParse(joinedDate, out newDateTime))
             {
-                throw new ArgumentException("DateTime format is invalid");
+                throw new ArgumentException("Invalid DateTime.");
             }
 
             examToFind.DateTime = newDateTime;
             context.SaveChanges();
 
-            return $"Updated exam with id: {examId} to: {newDateTime.ToString()}.";
+            return $"Updated exam with Id {examId}'s DateTime to {newDateTime.ToString()}.";
         }
     }
 }
