@@ -81,7 +81,7 @@ namespace TAILS.Commands
                         cb.SetTextMatrix(270, 810);
                         cb.ShowText($"ExamName: {examName}");
                         cb.SetTextMatrix(270, 795);
-                        cb.ShowText($"ExamStartingTime: {examDateTime.AddHours(14)}");
+                        cb.ShowText($"ExamStartingTime: {examDateTime.AddHours(14).ToString("dd/MM/yy dddd @ H:mm")}");
                         cb.SetTextMatrix(270, 780);
                         cb.ShowText($"HallName: {hallName}");
                         cb.SetColorFill(BaseColor.GREEN);
@@ -107,7 +107,7 @@ namespace TAILS.Commands
                     cb.SetTextMatrix(50, 784);
                     cb.ShowText($"ExamName: {examName}");
                     cb.SetTextMatrix(50, 768);
-                    cb.ShowText($"ExamStartingTime: {examDateTime.AddHours(14)}");
+                    cb.ShowText($"ExamStartingTime: {examDateTime.AddHours(14).ToString("dd/MM/yy dddd @ H:mm")}");
                     cb.SetTextMatrix(50, 754);
                     cb.ShowText($"HallName: {hallName}");
                     cb.SetColorFill(BaseColor.GREEN);
