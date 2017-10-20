@@ -1,4 +1,5 @@
-﻿using TAILS.Data;
+﻿using System;
+using TAILS.Data;
 using System.Linq;
 using TAILS.Models;
 using Bytes2you.Validation;
@@ -20,6 +21,11 @@ namespace TAILS.Commands
 
         public string Execute(IList<string> parameters)
         {
+            if (parameters.Count() < 3)
+            {
+                throw new ArgumentException("Invalid number of parameters.");
+            }
+
             string firstName = parameters[0];
             string lastName = parameters[1];
             string username = parameters[2];

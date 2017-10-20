@@ -21,6 +21,11 @@ namespace TAILS.Commands
 
         public string Execute(IList<string> parameters)
         {
+            if (parameters.Count() != 2)
+            {
+                throw new ArgumentException("Invalid number of parameters.");
+            }
+
             int examId = 0;
             if (!int.TryParse(parameters[0], out examId))
             {

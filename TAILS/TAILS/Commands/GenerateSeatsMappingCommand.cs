@@ -24,10 +24,24 @@ namespace TAILS.Commands
 
         public string Execute(IList<string> parameters)
         {
-            int examId = int.Parse(parameters[0]);
+            if (parameters.Count() != 2)
+            {
+                throw new ArgumentException("Invalid number of parameters.");
+            }
+
+            int examId = 0;
+            if (!int.TryParse(parameters[0], out examId))
+            {
+                throw new ArgumentException("Invalid ExamId.");
+            }
             string examName = context.Courses.Find(examId).CourseName;
             DateTime examDateTime = context.Exams.Find(examId).DateTime;
-            int hallId = int.Parse(parameters[1]);
+
+            int hallId = 0;
+            if (!int.TryParse(parameters[1], out hallId))
+            {
+                throw new ArgumentException("Ivalid HallId.");
+            }
             string hallName = context.Halls.Find(hallId).HallName;
 
             FileStream fs = new FileStream("result.pdf", FileMode.Create);

@@ -1,4 +1,5 @@
-﻿using TAILS.Data;
+﻿using System;
+using TAILS.Data;
 using System.Linq;
 using Bytes2you.Validation;
 using TAILS.Commands.Contracts;
@@ -19,7 +20,15 @@ namespace TAILS.Commands
 
         public string Execute(IList<string> parameters)
         {
-            var id = int.Parse(parameters[0]);
+            if (parameters.Count() != 1)
+            {
+                throw new ArgumentException("Invalid number of parameters.");
+            }
+            int id = 0;
+            if (!int.TryParse(parameters[0], out id))
+            {
+                throw new ArgumentException("Invalid StudentId.");
+            }
             var delSt = context.Students.First(st => st.Id == id);
 
             context.Students.Remove(delSt);

@@ -22,7 +22,15 @@ namespace TAILS.Commands
 
         public string Execute(IList<string> parameters)
         {
-            int hallId = int.Parse(parameters[0]);
+            if (parameters.Count() != 1)
+            {
+                throw new ArgumentException("Invalid number of parameters.");
+            }
+            int hallId = 0;
+            if (!int.TryParse(parameters[0], out hallId))
+            {
+                throw new ArgumentException("Invalid HallId.");
+            }
 
             StringBuilder sb = new StringBuilder();
 
