@@ -20,7 +20,7 @@ namespace TAILS.Commands
 
         public string Execute(IList<string> parameters)
         {
-            if (parameters.Count() != 1)
+            if (parameters.Count != 1)
             {
                 throw new ArgumentException("Invalid number of parameters.");
             }
