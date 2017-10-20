@@ -21,7 +21,7 @@ namespace TAILS.UnitTests.Core.EngineTests
 
             //Act
             var engineInstance =
-                new Engine(readerMock.Object, writerMock.Object, parserMock.Object, contextMock.Object);
+                new TAILS.Core.Engine(readerMock.Object, writerMock.Object, parserMock.Object, contextMock.Object);
 
             //Assert
             Assert.IsNotNull(engineInstance);
@@ -37,7 +37,7 @@ namespace TAILS.UnitTests.Core.EngineTests
 
             //Act && Assert
             Assert.ThrowsException<ArgumentNullException>(
-                () => new Engine(null, writerMock.Object, parserMock.Object, contextMock.Object));
+                () => new TAILS.Core.Engine(null, writerMock.Object, parserMock.Object, contextMock.Object));
         }
 
         [TestMethod]
@@ -50,7 +50,7 @@ namespace TAILS.UnitTests.Core.EngineTests
 
             //Act && Assert
             Assert.ThrowsException<ArgumentNullException>(
-                () => new Engine(readerMock.Object, null, parserMock.Object, contextMock.Object));
+                () => new TAILS.Core.Engine(readerMock.Object, null, parserMock.Object, contextMock.Object));
         }
 
         [TestMethod]
@@ -63,7 +63,7 @@ namespace TAILS.UnitTests.Core.EngineTests
 
             //Act && Assert
             Assert.ThrowsException<ArgumentNullException>(
-                () => new Engine(readerMock.Object, writerMock.Object, null, contextMock.Object));
+                () => new TAILS.Core.Engine(readerMock.Object, writerMock.Object, null, contextMock.Object));
         }
 
         [TestMethod]
@@ -76,7 +76,7 @@ namespace TAILS.UnitTests.Core.EngineTests
 
             //Act && Assert
             Assert.ThrowsException<ArgumentNullException>(
-                () => new Engine(readerMock.Object, writerMock.Object, parserMock.Object, null));
+                () => new TAILS.Core.Engine(readerMock.Object, writerMock.Object, parserMock.Object, null));
         }
     }
 }
