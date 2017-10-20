@@ -4,7 +4,7 @@ VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAILS", "TAILS\TAILS.csproj", "{39517709-F270-4D28-9B9F-2E70C9927B65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAILS.UnitTests", "Tails.UnitTests\TAILS.UnitTests.csproj", "{1570FD15-C9DD-4365-A7EC-4960923DCB9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAILS.UnitTests", "TAILS.UnitTests\TAILS.UnitTests.csproj", "{D42A49DB-E431-48D0-8461-900569264C8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +21,14 @@ Global
 		{39517709-F270-4D28-9B9F-2E70C9927B65}.Release|Any CPU.ActiveCfg = Release|x86
 		{39517709-F270-4D28-9B9F-2E70C9927B65}.Release|x86.ActiveCfg = Release|x86
 		{39517709-F270-4D28-9B9F-2E70C9927B65}.Release|x86.Build.0 = Release|x86
-		{1570FD15-C9DD-4365-A7EC-4960923DCB9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1570FD15-C9DD-4365-A7EC-4960923DCB9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1570FD15-C9DD-4365-A7EC-4960923DCB9F}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{1570FD15-C9DD-4365-A7EC-4960923DCB9F}.Debug|x86.Build.0 = Debug|Any CPU
-		{1570FD15-C9DD-4365-A7EC-4960923DCB9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1570FD15-C9DD-4365-A7EC-4960923DCB9F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1570FD15-C9DD-4365-A7EC-4960923DCB9F}.Release|x86.ActiveCfg = Release|Any CPU
-		{1570FD15-C9DD-4365-A7EC-4960923DCB9F}.Release|x86.Build.0 = Release|Any CPU
+		{D42A49DB-E431-48D0-8461-900569264C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D42A49DB-E431-48D0-8461-900569264C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D42A49DB-E431-48D0-8461-900569264C8A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D42A49DB-E431-48D0-8461-900569264C8A}.Debug|x86.Build.0 = Debug|Any CPU
+		{D42A49DB-E431-48D0-8461-900569264C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D42A49DB-E431-48D0-8461-900569264C8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D42A49DB-E431-48D0-8461-900569264C8A}.Release|x86.ActiveCfg = Release|Any CPU
+		{D42A49DB-E431-48D0-8461-900569264C8A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
